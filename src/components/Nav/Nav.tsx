@@ -123,6 +123,9 @@ export function Nav() {
                 <Plus className={styles.plus} />
               </li>
             ))}
+            <div className={styles.middleii}>
+              <SearchBar />
+            </div>
           </ul>
         </div>
         <div className={styles.navIconsContainer}>

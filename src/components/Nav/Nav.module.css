@@ -23,6 +23,10 @@
   padding-bottom: 2rem;
 }
 
+.middleii {
+  display: none;
+}
+
 .left {
   display: flex;
   align-items: center;
@@ -195,8 +199,12 @@
     background-color: var(--red);
   }
 
-  .black {
-    background-color: var(--black);
+  .middle {
+    display: none;
+  }
+
+  .middleii {
+    display: block;
   }
 }
 
