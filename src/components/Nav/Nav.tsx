@@ -4,14 +4,17 @@ import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 import SearchBar from "../SearchBar/SearchBar";
-// import NavbarIcons from "../NavbarIcons/NavbarIcons";
+import NavbarIcons from "../NavbarIcons/NavbarIcons";
 import { useEffect, useState } from "react";
+import Plus from "../../../public/icons/plus.svg";
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
   const openMenu = () => {
     setIsOpen(!isOpen);
+    setIsOverlayVisible(!isOverlayVisible);
   };
 
   useEffect(() => {
@@ -70,8 +73,31 @@ export function Nav() {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
+      <nav className={styles.navbar}>
         <div className={styles.left}>
+          {isOpen && (
+            <div
+              className={`${styles.overlay} ${
+                isOverlayVisible ? styles.visible : ""
+              }`}
+              onClick={() => {
+                setIsOpen(false);
+                setIsOverlayVisible(false);
+              }}
+            ></div>
+          )}
+          <span
+            className={
+              isOpen === false
+                ? styles.hamburger
+                : `${styles.hamburger} ${styles.active}`
+            }
+            onClick={openMenu}
+          >
+            <span className={styles.whiteBar}></span>
+            <span className={styles.whiteBar}></span>
+            <span className={styles.whiteBar}></span>
+          </span>
           <Logo />
         </div>
         <div className={styles.middle}>
@@ -88,30 +114,19 @@ export function Nav() {
             {navItems.map((navItem, index) => (
               <li
                 key={index}
-                className={styles.navItem}
+                className={styles.navItemContainer}
                 onClick={() => setIsOpen(false)}
               >
                 <Link href={navItem.href} className={styles.navItem}>
                   {navItem.text}
                 </Link>
+                <Plus className={styles.plus} />
               </li>
             ))}
-            {/* <div className={styles.navIconsContainer}>
-          <NavIcons color={color} />
-        </div> */}
           </ul>
-          <span
-            className={
-              isOpen === false
-                ? styles.hamburger
-                : `${styles.hamburger} ${styles.active}`
-            }
-            onClick={openMenu}
-          >
-            <span className={styles.whiteBar}></span>
-            <span className={styles.whiteBar}></span>
-            <span className={styles.whiteBar}></span>
-          </span>
+        </div>
+        <div className={styles.navIconsContainer}>
+          <NavbarIcons />
         </div>
       </nav>
     </header>
