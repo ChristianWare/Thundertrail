@@ -19,7 +19,7 @@
   margin-right: auto;
   margin-left: auto;
   padding: 5rem 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .overlay {
@@ -215,5 +215,4 @@
   .searchContainer {
     width: 100%;
   }
-
 }

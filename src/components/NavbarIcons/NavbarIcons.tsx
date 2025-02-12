@@ -20,7 +20,12 @@ export default function NavbarIcons() {
     <div className={styles.container}>
       <User className={styles.icon} onClick={() => setUserOpen(true)} />
       <Bell className={styles.icon} onClick={() => setBellOpen(true)} />
-      <Cart className={styles.icon} onClick={() => setCartOpen(true)} />
+      <div className={styles.cartParent}>
+        <Cart className={styles.icon} onClick={() => setCartOpen(true)} />
+        <span className={styles.counter}>
+          {/* {totalQuantity < 10 ? totalQuantity : "9+"} */}9
+        </span>
+      </div>
       <Modal isOpen={userOpen} onClose={() => setUserOpen(false)}>
         <div>
           {isLoggedIn ? (
