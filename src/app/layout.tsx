@@ -6,7 +6,6 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav/Nav";
-import Footer from "@/components/Footer/Footer";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -43,7 +42,6 @@ export default function RootLayout({
       >
         <Nav />
         {children}
-        <Footer />
       </body>
     </html>
   );
