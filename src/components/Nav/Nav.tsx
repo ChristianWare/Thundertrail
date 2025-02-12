@@ -4,6 +4,8 @@ import styles from "./Nav.module.css";
 import Logo from "../Logo/Logo";
 import Cart from "../../../public/icons/shoppingCart.svg";
 import Link from "next/link";
+import SearchBar from "../SearchBar/SearchBar";
+import NavbarIcons from "../NavbarIcons/NavbarIcons";
 
 export async function Nav() {
   const navItems = [
@@ -43,7 +45,9 @@ export async function Nav() {
         <div className={styles.left}>
           <Logo />
         </div>
-        <div className={styles.middle}></div>
+        <div className={styles.middle}>
+          <SearchBar />
+        </div>
         <div className={styles.right}>
           <ul className={styles.menu}>
             {navItems.map((x, index) => (
@@ -53,7 +57,8 @@ export async function Nav() {
             ))}
           </ul>
           <div className={styles.iconContainer}>
-            <Cart className={styles.icon} />
+            {/* <Cart className={styles.icon} /> */}
+            <NavbarIcons />
           </div>
         </div>
       </nav>
