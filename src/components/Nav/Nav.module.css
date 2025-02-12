@@ -133,6 +133,7 @@
   z-index: 998;
   background-color: var(--white);
   padding: 2rem;
+  /* padding-left: 13rem; */
 }
 
 .navItemContainer {
@@ -190,12 +191,9 @@
   display: block;
 }
 
-/* @media screen and (max-width: 870px) {
-  .nav {
-    padding: 8rem 6rem;
-    padding-bottom: 0rem;
-  }
-} */
+.navIconsContainerii {
+  display: none;
+}
 
 @media screen and (max-width: 568px) {
   .header {
@@ -213,4 +211,9 @@
   .navMenu {
     max-width: 100%;
   }
+
+  .searchContainer {
+    width: 100%;
+  }
+
 }

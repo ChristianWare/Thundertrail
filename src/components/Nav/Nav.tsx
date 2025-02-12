@@ -96,7 +96,7 @@ export function Nav() {
           </span>
           <Logo />
         </div>
-       
+
         <div className={styles.right}>
           <ul
             className={
