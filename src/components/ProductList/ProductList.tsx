@@ -6,7 +6,9 @@ export default function ProductList() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <h2 className={styles.heading}>Product List Here</h2>
+          <h2 className={styles.heading}>
+            New <br /> Arrivals
+          </h2>
         </div>
       </LayoutWrapper>
     </section>

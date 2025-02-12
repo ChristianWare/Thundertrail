@@ -65,6 +65,7 @@ h2 {
   font-size: 9.6rem;
   font-weight: 800;
   line-height: 85%;
+  letter-spacing: -3px;
   font-family: var(--barlowCondensed);
 }
 
