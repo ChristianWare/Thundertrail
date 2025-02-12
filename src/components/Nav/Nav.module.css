@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 5rem;
   max-width: 1500px;
   margin-right: auto;
   margin-left: auto;
@@ -201,11 +200,11 @@
 @media screen and (max-width: 568px) {
   .header {
     /* padding: 10rem 3rem; */
-    padding-top: 5rem;
+    padding-top: 6rem;
   }
 
   .navbar {
-    padding: 4rem 1.5rem;
+    padding: 4rem 2.5rem;
     padding-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
