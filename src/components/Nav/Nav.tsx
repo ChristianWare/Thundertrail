@@ -50,10 +50,6 @@ export function Nav() {
       href: "/shop",
     },
     {
-      text: "Deals",
-      href: "/deals",
-    },
-    {
       text: "About",
       href: "/about",
     },
