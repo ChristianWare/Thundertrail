@@ -1,15 +1,13 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Hero.module.css";
-// import Image from "next/image";
-// import Img1 from "../../../public/images/hero.jpg";
 import ProductPreview from "../ProductPreview/ProductPreview";
+import ScrollHorizontalText from "../ScrollHorizontalText/ScrollHorizontalText";
 
 export default function Hero() {
   return (
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          {/* <Image src={Img1} alt='' title='' fill className={styles.img} /> */}
           <div className={styles.imgOverlay}></div>
           <div className={styles.contentChildren}>
             <div className={styles.left}>
@@ -25,8 +23,10 @@ export default function Hero() {
             </div>
           </div>
         </div>
+          <ScrollHorizontalText
+            text='Returns extends over a period of 14 days'
+          />
       </LayoutWrapper>
     </section>
   );
 }
-
