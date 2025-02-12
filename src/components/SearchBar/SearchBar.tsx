@@ -2,11 +2,29 @@
 
 import styles from "./SearchBar.module.css";
 import SearchIcon from "../../../public/icons/search.svg";
+import { useRouter } from "next/navigation";
 
 export default function SearchBar() {
+  const router = useRouter();
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+
+    if (name) {
+      router.push(`/list?name=${name}`);
+    }
+  };
+
   return (
-    <form className={styles.container}>
-      <input type='text' placeholder='search' className={styles.input} />
+    <form className={styles.container} onSubmit={handleSearch}>
+      <input
+        type='text'
+        name='name'
+        placeholder='search'
+        className={styles.input}
+      />
       <SearchIcon className={styles.icon} />
     </form>
   );
