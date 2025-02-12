@@ -16,7 +16,7 @@ const interTight = Inter_Tight({
 const barlowCondensed = Barlow_Condensed({
   variable: "--barlowCondensed",
   subsets: ["latin"],
-  weight: ["100", "700", "800"],
+  weight: ["100", "400", "500", "600", "700", "800"],
 });
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({

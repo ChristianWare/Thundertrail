@@ -9,6 +9,7 @@
   width: 100%;
   background-color: var(--white);
   padding-top: 5rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar {
