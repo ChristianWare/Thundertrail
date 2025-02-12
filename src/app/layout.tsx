@@ -7,7 +7,6 @@ import {
 import "./globals.css";
 import { Nav } from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
-import Providers from "@/providers";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -39,15 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <Providers>
-        <body
-          className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
-        >
-          <Nav />
-          {children}
-          <Footer />
-        </body>
-      </Providers>
+      <body
+        className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
+      >
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
