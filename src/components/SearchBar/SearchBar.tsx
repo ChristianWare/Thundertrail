@@ -1,11 +1,13 @@
 "use client";
 
 import styles from "./SearchBar.module.css";
+import SearchIcon from "../../../public/icons/search.svg";
 
 export default function SearchBar() {
   return (
-    <div className={styles.container}>
-      <div>Searchbar</div>
-    </div>
+    <form className={styles.container}>
+      <input type='text' placeholder='search' className={styles.input} />
+      <SearchIcon className={styles.icon} />
+    </form>
   );
 }

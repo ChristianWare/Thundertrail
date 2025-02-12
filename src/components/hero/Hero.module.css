@@ -1,5 +1,5 @@
 .container {
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 
 .content {
@@ -74,14 +74,19 @@
   width: 100%;
 }
 
-@media screen and (max-width: 870px) {
-  .container {
-    margin-top: -1rem;
-  }
-}
 
 @media screen and (max-width: 1068px) {
   .right {
     display: none;
+  }
+}
+
+@media screen and (max-width: 870px) {
+
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    height: 90vh;
   }
 }

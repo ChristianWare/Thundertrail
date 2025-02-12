@@ -96,9 +96,7 @@ export function Nav() {
           </span>
           <Logo />
         </div>
-        <div className={styles.middle}>
-          <SearchBar />
-        </div>
+       
         <div className={styles.right}>
           <ul
             className={
@@ -119,7 +117,7 @@ export function Nav() {
                 <Plus className={styles.plus} />
               </li>
             ))}
-            <div className={styles.middleii}>
+            <div className={styles.searchContainer}>
               <SearchBar />
             </div>
           </ul>
