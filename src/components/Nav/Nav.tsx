@@ -105,6 +105,9 @@ export function Nav() {
                 : `${styles.navMenu} ${styles.active}`
             }
           >
+            <div className={styles.searchContainer}>
+              <SearchBar />
+            </div>
             {navItems.map((navItem, index) => (
               <li
                 key={index}
@@ -117,9 +120,6 @@ export function Nav() {
                 <Plus className={styles.plus} />
               </li>
             ))}
-            <div className={styles.searchContainer}>
-              <SearchBar />
-            </div>
           </ul>
         </div>
         <div className={styles.navIconsContainer}>
