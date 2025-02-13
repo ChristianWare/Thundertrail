@@ -52,10 +52,11 @@ h5,
 h6,
 span {
   text-transform: uppercase;
+  font-family: var(--barlowCondensed);
 }
 
 h1 {
-  font-size: 12.8rem;
+  font-size: 11rem;
   line-height: 80%;
   font-weight: 800;
   letter-spacing: -4px;

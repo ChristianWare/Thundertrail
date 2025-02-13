@@ -60,6 +60,16 @@
   color: var(--white);
 }
 
+.thunder {
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.icon {
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
 .copy {
   color: var(--white);
   font-family: var(--barlowSemiCondensed);
@@ -78,9 +88,27 @@
   .right {
     display: none;
   }
+
+  .contentChildren {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .left {
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .heading, .copy {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 568px) {

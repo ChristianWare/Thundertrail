@@ -2,6 +2,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Hero.module.css";
 import ProductPreview from "../ProductPreview/ProductPreview";
 import ScrollHorizontalText from "../ScrollHorizontalText/ScrollHorizontalText";
+import Thunder from "../../../public/icons/lightning.svg";
 
 export default function Hero() {
   return (
@@ -12,7 +13,11 @@ export default function Hero() {
           <div className={styles.contentChildren}>
             <div className={styles.left}>
               <h1 className={styles.heading} lang='en'>
-                RISE WITH <br /> THE RIDING.
+                RISE WITH <br /> THE{" "}
+                <span className={styles.thunder}>
+                  THUNDER
+                  <Thunder className={styles.icon} />
+                </span>
               </h1>
               <p className={styles.copy}>
                 Your shop for bicycles <br /> and e-bikes in SWitzerland.
@@ -23,9 +28,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-          <ScrollHorizontalText
-            text='Returns extends over a period of 14 days'
-          />
+        <ScrollHorizontalText text='Returns extends over a period of 14 days' />
       </LayoutWrapper>
     </section>
   );

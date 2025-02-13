@@ -13,30 +13,37 @@ const data = [
   {
     id: 7,
     src: Img7,
+    category: "Bikes",
   },
   {
     id: 1,
     src: Img1,
+    category: "Parts",
   },
   {
     id: 2,
     src: Img2,
+    category: "Gear",
   },
   {
     id: 3,
     src: Img3,
+    category: "Outlet",
   },
   {
     id: 4,
     src: Img4,
+    category: "Services",
   },
   {
     id: 5,
     src: Img5,
+    category: "Blog",
   },
   {
     id: 6,
     src: Img6,
+    category: "Events",
   },
 ];
 
@@ -49,12 +56,12 @@ export default function CategoryList() {
         </div>
         <div className={styles.contentTop}>
           {data.slice(0, 4).map((x) => (
-            <CategoryCard key={x.id} src={x.src} />
+            <CategoryCard key={x.id} src={x.src} category={x.category} />
           ))}
         </div>
         <div className={styles.contentBottom}>
           {data.slice(4, data.length).map((x) => (
-            <CategoryCard key={x.id} src={x.src} />
+            <CategoryCard key={x.id} src={x.src} category={x.category} />
           ))}
         </div>
         <div className={styles.content}></div>
