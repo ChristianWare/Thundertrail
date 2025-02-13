@@ -1,7 +1,7 @@
+import styles from "./ProductList.module.css";
 import Link from "next/link";
 import LayoutWrapper from "../LayoutWrapper";
 import ProductPreview from "../ProductPreview/ProductPreview";
-import styles from "./ProductList.module.css";
 
 export default function ProductList() {
   return (
