@@ -11,9 +11,15 @@ export default function ProductList() {
           <h2 className={styles.heading}>
             New <br /> Arrivals
           </h2>
-          <Link href='/shop' className={styles.shopAll}>Shop all</Link>
+          <Link href='/shop' className={styles.shopAll}>
+            Shop all
+          </Link>
         </div>
         <div className={styles.content}>
+          <ProductPreview />
+          <ProductPreview />
+          <ProductPreview />
+          <ProductPreview />
           <ProductPreview />
           <ProductPreview />
           <ProductPreview />

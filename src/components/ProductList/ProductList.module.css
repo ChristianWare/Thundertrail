@@ -3,10 +3,10 @@
 }
 
 .top {
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   width: 100%;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+  /* padding-bottom: 2rem; */
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
