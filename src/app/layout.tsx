@@ -6,6 +6,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav/Nav";
+import { WixClientProvider } from "@/context/wixContext";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -40,8 +41,10 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
       >
-        <Nav />
-        {children}
+        <WixClientProvider>
+          <Nav />
+          {children}
+        </WixClientProvider>
       </body>
     </html>
   );
