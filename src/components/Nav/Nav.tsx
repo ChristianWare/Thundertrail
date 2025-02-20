@@ -106,7 +106,7 @@ export function Nav() {
             }
           >
             <div className={styles.searchContainer}>
-              <SearchBar />
+              <SearchBar closeMenu={() => setIsOpen(false)} />
             </div>
             {navItems.map((navItem, index) => (
               <li
